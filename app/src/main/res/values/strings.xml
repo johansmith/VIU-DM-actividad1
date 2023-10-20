@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Actividad #1</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="height">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="age">Edad</string>
+    <string name="calculate">Calcular</string>
+    <string name="result">Tu resultado</string>
+    <string name="recalculate">Re-calcular</string>
+
+    <string name="error">Error</string>
+
+    <string name="title_bajo_peso">Bajo peso</string>
+    <string name="description_bajo_peso">Estás por debajo de lo óptimo para tu peso y altura.</string>
+
+    <string name="title_normal_peso">Normal</string>
+    <string name="description_normal_peso">Estás en lo óptimo para tu peso y altura.</string>
+
+    <string name="title_sobrepeso">Sobrepeso</string>
+    <string name="description_sobrepeso">Estás en por encima de lo óptimo para tu peso y altura.</string>
+
+    <string name="title_obesidad">Obesidad</string>
+    <string name="description_obesidad">Estás MUY por encima de lo óptimo para tu peso y altura.</string>
+
+    <string name="favorites">Empezar favoritos</string>
+    <string name="title_favorites">Bienvenido a la aplicación Android de la Actividad #1</string>
+    <string name="description_favorites">Hemos pensado crear esta aplicación permite administrar mis peliculas, series, canciones y libros favoritos. Agregando nuevos títulos favoritos de acuerdo a una serie de categorías.</string>
+    <string name="copyright_favorites">Desarrollado por: Jaime - Miguel - Johan</string>
+
+</resources>
