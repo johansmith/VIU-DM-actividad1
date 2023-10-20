@@ -28,4 +28,7 @@
     <string name="description_favorites">Hemos pensado crear esta aplicación permite administrar mis peliculas, series, canciones y libros favoritos. Agregando nuevos títulos favoritos de acuerdo a una serie de categorías.</string>
     <string name="copyright_favorites">Desarrollado por: Jaime - Miguel - Johan</string>
 
+    <string name="title_list_favorites">Mi listado de favoritos</string>
+    <string name="title_type_media">Tipo de contenido</string>
+
 </resources>
