@@ -30,5 +30,6 @@
 
     <string name="title_list_favorites">Mi listado de favoritos</string>
     <string name="title_type_media">Tipo de contenido</string>
+    <string name="title_favorites_content">Selección de favoritos</string>
 
 </resources>

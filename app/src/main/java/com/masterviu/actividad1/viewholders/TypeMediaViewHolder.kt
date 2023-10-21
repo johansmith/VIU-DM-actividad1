@@ -5,27 +5,27 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.masterviu.actividad1.R
-import com.masterviu.actividad1.tasks.TaskTypeMedia
+import com.masterviu.actividad1.contents.ContentTypeMedia
 
 class TypeMediaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val tvTypeMediaName: TextView = view.findViewById(R.id.tvTypeMediaName)
     private val ivIconTypeMedia: ImageView = view.findViewById(R.id.ivIconTypeMedia)
 
-    fun render(taskTypeMedia: TaskTypeMedia) {
-        when(taskTypeMedia) {
-            TaskTypeMedia.Canciones -> {
+    fun render(contentTypeMedia: ContentTypeMedia) {
+        when(contentTypeMedia) {
+            ContentTypeMedia.Canciones -> {
                 tvTypeMediaName.text = "Canciones"
                 ivIconTypeMedia.setImageResource(R.drawable.ic_songs);
             }
-            TaskTypeMedia.Libros -> {
+            ContentTypeMedia.Libros -> {
                 tvTypeMediaName.text = "Libros"
                 ivIconTypeMedia.setImageResource(R.drawable.ic_books);
             }
-            TaskTypeMedia.Peliculas -> {
+            ContentTypeMedia.Peliculas -> {
                 tvTypeMediaName.text = "Peliculas"
                 ivIconTypeMedia.setImageResource(R.drawable.ic_movies);
             }
-            TaskTypeMedia.Series -> {
+            ContentTypeMedia.Series -> {
                 tvTypeMediaName.text = "Series"
                 ivIconTypeMedia.setImageResource(R.drawable.ic_series);
             }

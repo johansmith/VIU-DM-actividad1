@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.masterviu.actividad1.R
-import com.masterviu.actividad1.tasks.TaskTypeMedia
+import com.masterviu.actividad1.contents.ContentTypeMedia
 import com.masterviu.actividad1.viewholders.TypeMediaViewHolder
 
-class TypeMediaAdapter(private val type_medias:List<TaskTypeMedia>) :
+class TypeMediaAdapter(private val type_medias:List<ContentTypeMedia>) :
     RecyclerView.Adapter<TypeMediaViewHolder>() {
 
     // CREA LA LISTA DE OBJETOS

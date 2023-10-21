@@ -33,7 +33,24 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTypeMedia"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:text="@string/title_favorites_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="30dp"/>
 
