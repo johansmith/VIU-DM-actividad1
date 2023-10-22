@@ -54,6 +54,21 @@
             android:textColor="@color/white"
             android:backgroundTint="@color/white"/>
 
+        <RadioButton
+            android:id="@+id/rbItemVarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Varios"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/btnNewFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/text_button_new_favorite" />
+
     </RadioGroup>
 
 

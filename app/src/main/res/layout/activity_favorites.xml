@@ -70,7 +70,7 @@
         android:src="@drawable/ic_add"
         app:tint="@color/white"
         android:layout_gravity="right|bottom"
-        app:fabSize="mini"
+        app:fabSize="normal"
         android:backgroundTint="@color/background_primary"/>
 
 </FrameLayout>

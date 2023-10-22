@@ -29,6 +29,10 @@ class TypeMediaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 tvTypeMediaName.text = "Series"
                 ivIconTypeMedia.setImageResource(R.drawable.ic_series);
             }
+            ContentTypeMedia.Varios -> {
+                tvTypeMediaName.text = "Varios"
+                ivIconTypeMedia.setImageResource(R.drawable.ic_several);
+            }
         }
 
     }
