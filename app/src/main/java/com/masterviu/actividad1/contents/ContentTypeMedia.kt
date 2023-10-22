@@ -6,6 +6,7 @@ sealed class ContentTypeMedia {
     object Series: ContentTypeMedia()
     object Canciones: ContentTypeMedia()
     object Libros: ContentTypeMedia()
+    object Deportes: ContentTypeMedia()
     object Varios: ContentTypeMedia()
 
 }

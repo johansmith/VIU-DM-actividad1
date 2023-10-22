@@ -34,4 +34,11 @@
     <string name="hint_dialog_new_favorite">Escribir nuevo favorito</string>
     <string name="text_button_new_favorite">Crear favorito</string>
 
+    <string name="ContentTypeMediaSeries">Series</string>
+    <string name="ContentTypeMediaPeliculas">Pelicula</string>
+    <string name="ContentTypeMediaCanciones">Canciones</string>
+    <string name="ContentTypeMediaLibros">Libros</string>
+    <string name="ContentTypeMediaDeportes">Deportes</string>
+    <string name="ContentTypeMediaVarios">Varios</string>
+
 </resources>

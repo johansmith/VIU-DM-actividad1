@@ -24,6 +24,7 @@ class FavoritesActivity : AppCompatActivity() {
         Peliculas,
         Canciones,
         Libros,
+        Deportes,
         Varios,
     )
 
@@ -63,21 +64,29 @@ class FavoritesActivity : AppCompatActivity() {
 
         btnNewFavorite.setOnClickListener {
             // Aquí capturo el RadioButton seleccionado por el usuario
-            val selectedTypeMedia = grbListTypeMedia.checkedRadioButtonId
-            val selectedRadioButton: RadioButton = grbListTypeMedia.findViewById(selectedTypeMedia)
-            val currentCategory: ContentTypeMedia = when (selectedRadioButton.text) {
-                "Series" -> Series
-                "Peliculas" -> Peliculas
-                "Canciones" -> Canciones
-                "Libros" -> Libros
-                else -> Varios
+            val currentFavorite = etNewFavorite.text.toString()
+            if(currentFavorite.isNotEmpty()) {
+                val selectedTypeMedia = grbListTypeMedia.checkedRadioButtonId
+                val selectedRadioButton: RadioButton = grbListTypeMedia.findViewById(selectedTypeMedia)
+                val currentCategory: ContentTypeMedia = when (selectedRadioButton.text) {
+                    getString(R.string.ContentTypeMediaSeries) -> Series
+                    getString(R.string.ContentTypeMediaPeliculas) -> Peliculas
+                    getString(R.string.ContentTypeMediaCanciones) -> Canciones
+                    getString(R.string.ContentTypeMediaLibros) -> Libros
+                    else -> Varios
+                }
+                favorites.add(ContentFavorites(currentFavorite, currentCategory))
+                updateFavorites()
+                dialogNewFavorite.hide()
             }
-            favorites.add(ContentFavorites(etNewFavorite.text.toString(), currentCategory))
-            updateFavorites()
-            dialogNewFavorite.hide()
-
         }
         dialogNewFavorite.show()
+    }
+
+    // Actualizando la lista para tachar los items, esta es una función LAMBDA que invocaremos posteriormente en el adaptador
+    private fun onItemSelected(position:Int) {
+        favorites[position].isSelected = !favorites[position].isSelected
+        updateFavorites()
     }
 
     // Esta función notifica al adaptor para que se entere que se han agregado nuevos items
@@ -96,7 +105,9 @@ class FavoritesActivity : AppCompatActivity() {
         rvTypeMedia.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvTypeMedia.adapter = typeMediaAdapter
 
-        favoriteAdapter = FavoriteAdapter(favorites)
+        // El primer parametro para nuestro adaptador es la lista de objetos
+        // El segundo parametro es la función Lambda que nos permite actualizar el item seleccionado para tacharlo en la posición elegida por el usuario
+        favoriteAdapter = FavoriteAdapter(favorites, {position -> onItemSelected(position)})
         rvFavorites.layoutManager = LinearLayoutManager(this)
         rvFavorites.adapter = favoriteAdapter
 
