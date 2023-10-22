@@ -1,6 +1,6 @@
 package com.masterviu.actividad1.contents
 
-sealed class ContentTypeMedia {
+sealed class ContentTypeMedia(var isSelected:Boolean = false) {
 
     object Peliculas: ContentTypeMedia()
     object Series: ContentTypeMedia()

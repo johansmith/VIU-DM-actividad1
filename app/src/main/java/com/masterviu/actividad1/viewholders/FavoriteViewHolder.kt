@@ -16,7 +16,6 @@ class FavoriteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val cbFavorites:CheckBox = view.findViewById(R.id.cbFavorites)
 
     fun render(favorites:ContentFavorites) {
-
         // Tachamos los favoritos seleccionados
         if(favorites.isSelected){
             tvFavorites.paintFlags = tvFavorites.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG

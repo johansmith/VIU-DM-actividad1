@@ -3,6 +3,7 @@ package com.masterviu.actividad1.activities
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -68,9 +69,11 @@ class FavoritesActivity : AppCompatActivity() {
             if(currentFavorite.isNotEmpty()) {
                 val selectedTypeMedia = grbListTypeMedia.checkedRadioButtonId
                 val selectedRadioButton: RadioButton = grbListTypeMedia.findViewById(selectedTypeMedia)
+                Log.i("PRUEBA", selectedRadioButton.text.toString())
                 val currentCategory: ContentTypeMedia = when (selectedRadioButton.text) {
                     getString(R.string.ContentTypeMediaSeries) -> Series
                     getString(R.string.ContentTypeMediaPeliculas) -> Peliculas
+                    getString(R.string.ContentTypeMediaDeportes) -> Deportes
                     getString(R.string.ContentTypeMediaCanciones) -> Canciones
                     getString(R.string.ContentTypeMediaLibros) -> Libros
                     else -> Varios
@@ -91,7 +94,19 @@ class FavoritesActivity : AppCompatActivity() {
 
     // Esta función notifica al adaptor para que se entere que se han agregado nuevos items
     private fun updateFavorites() {
+        // Filtamos solo los favoritos que pertenezcan al tipo de contenido seleccionado
+        val selectedTypeMedia: List<ContentTypeMedia> = typeMedias.filter { it.isSelected }
+        val newFavorites = favorites.filter { selectedTypeMedia.contains(it.typeMedia) }
+        // Asignamos la nueva lista de favoritos filtrada al Adapter de favoritos
+        favoriteAdapter.favorites = newFavorites
         favoriteAdapter.notifyDataSetChanged()
+    }
+
+    private fun onItemSelectedCategories(position:Int){
+        typeMedias[position].isSelected = !typeMedias[position].isSelected
+        // Notificamos al adaptador solo el item actualizado
+        typeMediaAdapter.notifyItemChanged(position)
+        updateFavorites()
     }
 
     private fun initComponent() {
@@ -101,7 +116,9 @@ class FavoritesActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        typeMediaAdapter = TypeMediaAdapter(typeMedias)
+        // El primer parametro para nuestro adaptador es la lista de objetos
+        // El segundo parametro es la función Lambda que nos permite actualizar el color de fondo en la posición elegida por el usuario
+        typeMediaAdapter = TypeMediaAdapter(typeMedias, {position -> onItemSelectedCategories(position)})
         rvTypeMedia.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvTypeMedia.adapter = typeMediaAdapter
 

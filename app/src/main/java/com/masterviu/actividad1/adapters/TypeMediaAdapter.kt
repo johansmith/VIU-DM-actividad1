@@ -7,7 +7,9 @@ import com.masterviu.actividad1.R
 import com.masterviu.actividad1.contents.ContentTypeMedia
 import com.masterviu.actividad1.viewholders.TypeMediaViewHolder
 
-class TypeMediaAdapter(private val type_medias:List<ContentTypeMedia>) :
+class TypeMediaAdapter(
+    private val type_medias:List<ContentTypeMedia>,
+    private val onTypeMediaSelected:(Int) -> Unit) :
     RecyclerView.Adapter<TypeMediaViewHolder>() {
 
     // CREA LA LISTA DE OBJETOS
@@ -24,7 +26,8 @@ class TypeMediaAdapter(private val type_medias:List<ContentTypeMedia>) :
 
     // ALIMENTA LA LISTA DE OBJETOS
     override fun onBindViewHolder(holder: TypeMediaViewHolder, position: Int) {
-        holder.render(type_medias[position])
+        // Enviamos la función LAMBDA al render
+        holder.render(type_medias[position], onTypeMediaSelected)
     }
 
 }

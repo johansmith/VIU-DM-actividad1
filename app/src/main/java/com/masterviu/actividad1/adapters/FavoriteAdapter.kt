@@ -7,16 +7,16 @@ import com.masterviu.actividad1.R
 import com.masterviu.actividad1.contents.ContentFavorites
 import com.masterviu.actividad1.viewholders.FavoriteViewHolder
 
-class FavoriteAdapter(private val favorites:List<ContentFavorites>, private val onFavoriteSelected:(Int) -> Unit ) : RecyclerView.Adapter<FavoriteViewHolder>() {
+class FavoriteAdapter(
+    var favorites:List<ContentFavorites>,
+    private val onFavoriteSelected:(Int) -> Unit ) : RecyclerView.Adapter<FavoriteViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val viewTypeMedia = LayoutInflater.from(parent.context).inflate(R.layout.item_favorite, parent, false)
         return FavoriteViewHolder(viewTypeMedia)
     }
-
     override fun getItemCount(): Int {
         return favorites.size
     }
-
     override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         holder.render(favorites[position])
         // Ejecutando función LAMBDA recibida por parametros
@@ -25,4 +25,5 @@ class FavoriteAdapter(private val favorites:List<ContentFavorites>, private val 
         }
 
     }
+
 }

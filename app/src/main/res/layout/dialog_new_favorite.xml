@@ -34,7 +34,7 @@
             android:id="@+id/rbItemPeliculas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peliculas"
+            android:text="@string/ContentTypeMediaPeliculas"
             android:textColor="@color/white"
             android:backgroundTint="@color/white"/>
 
@@ -42,7 +42,7 @@
             android:id="@+id/rbItemCanciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Canciones"
+            android:text="@string/ContentTypeMediaCanciones"
             android:textColor="@color/white"
             android:backgroundTint="@color/white"/>
 
@@ -50,7 +50,15 @@
             android:id="@+id/rbItemLibros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Libros"
+            android:text="@string/ContentTypeMediaLibros"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbItemDeportes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ContentTypeMediaDeportes"
             android:textColor="@color/white"
             android:backgroundTint="@color/white"/>
 
@@ -58,7 +66,7 @@
             android:id="@+id/rbItemVarios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Varios"
+            android:text="@string/ContentTypeMediaVarios"
             android:textColor="@color/white"
             android:backgroundTint="@color/white"/>
 
