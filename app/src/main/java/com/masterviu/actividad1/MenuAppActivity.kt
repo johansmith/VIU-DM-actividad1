@@ -15,7 +15,7 @@ class MenuAppActivity : AppCompatActivity() {
 
         val btnFavoritos = findViewById<Button>(R.id.btnFavoritos)
 
-        /*
+
         val btnSaludar = findViewById<Button>(R.id.btnSaludar)
         val btnIMC = findViewById<Button>(R.id.btnIMC)
 
@@ -27,14 +27,13 @@ class MenuAppActivity : AppCompatActivity() {
         btnIMC.setOnClickListener {
             navigateToIMC()
         }
-        */
 
         btnFavoritos.setOnClickListener {
             navigateToFavorites()
         }
     }
 
-    /*
+
     private fun navigateToIMC() {
         val intentIMC = Intent(this, IMCCalculatorActivity::class.java)
         startActivity(intentIMC)
@@ -44,7 +43,7 @@ class MenuAppActivity : AppCompatActivity() {
         val intentSaludar = Intent(this, FirstAppActivity::class.java)
         startActivity(intentSaludar)
     }
-    */
+
 
     private fun navigateToFavorites() {
         val intentFavoritos = Intent(this, FavoritesActivity::class.java)
