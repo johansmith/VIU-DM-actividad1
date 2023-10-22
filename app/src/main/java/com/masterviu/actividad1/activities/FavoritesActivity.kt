@@ -1,9 +1,11 @@
 package com.masterviu.actividad1.activities
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.masterviu.actividad1.R
 import com.masterviu.actividad1.adapters.FavoriteAdapter
 import com.masterviu.actividad1.adapters.TypeMediaAdapter
@@ -30,6 +32,7 @@ class FavoritesActivity : AppCompatActivity() {
     private lateinit var rvFavorites: RecyclerView
     private lateinit var typeMediaAdapter: TypeMediaAdapter
     private lateinit var favoriteAdapter: FavoriteAdapter
+    private lateinit var fabNewFavorite: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,11 +40,23 @@ class FavoritesActivity : AppCompatActivity() {
 
         initComponent()
         initUI()
+        initListeners()
+    }
+
+    private fun initListeners() {
+        fabNewFavorite.setOnClickListener { showDialogNewFavorite() }
+    }
+
+    private fun showDialogNewFavorite() {
+        val dialogNewFavorite = Dialog(this)
+        dialogNewFavorite.setContentView(R.layout.dialog_new_favorite)
+        dialogNewFavorite.show()
     }
 
     private fun initComponent() {
         rvTypeMedia = findViewById(R.id.rvTypeMedia)
         rvFavorites = findViewById(R.id.rvFavorites)
+        fabNewFavorite = findViewById(R.id.fabNewFavorite)
     }
 
     private fun initUI() {

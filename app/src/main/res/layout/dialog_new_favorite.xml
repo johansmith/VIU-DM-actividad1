@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background_dark"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etNewFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="@string/hint_dialog_new_favorite"/>
+
+    <RadioGroup
+        android:id="@+id/grbListTypeMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbItemSeries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Series"
+            android:checked="true"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbItemPeliculas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peliculas"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbItemCanciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Canciones"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbItemLibros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libros"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"/>
+
+    </RadioGroup>
+
+
+
+</LinearLayout>
