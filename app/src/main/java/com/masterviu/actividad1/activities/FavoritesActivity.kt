@@ -1,6 +1,7 @@
 package com.masterviu.actividad1.activities
 
 import android.app.Dialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -40,6 +41,7 @@ class FavoritesActivity : AppCompatActivity() {
     private lateinit var typeMediaAdapter: TypeMediaAdapter
     private lateinit var favoriteAdapter: FavoriteAdapter
     private lateinit var fabNewFavorite: FloatingActionButton
+    private lateinit var fabHelp: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +54,15 @@ class FavoritesActivity : AppCompatActivity() {
 
     private fun initListeners() {
         fabNewFavorite.setOnClickListener { showDialogNewFavorite() }
+
+        fabHelp.setOnClickListener {
+            navigateToTutorial()
+        }
+    }
+
+    private fun navigateToTutorial() {
+        val intentHelp = Intent(this, HelpActivity::class.java)
+        startActivity(intentHelp)
     }
 
     private fun showDialogNewFavorite() {
@@ -113,6 +124,7 @@ class FavoritesActivity : AppCompatActivity() {
         rvTypeMedia = findViewById(R.id.rvTypeMedia)
         rvFavorites = findViewById(R.id.rvFavorites)
         fabNewFavorite = findViewById(R.id.fabNewFavorite)
+        fabHelp = findViewById(R.id.fabHelp)
     }
 
     private fun initUI() {

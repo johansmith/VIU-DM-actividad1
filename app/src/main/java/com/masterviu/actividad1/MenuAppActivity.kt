@@ -14,8 +14,6 @@ class MenuAppActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu_app)
 
         val btnFavoritos = findViewById<Button>(R.id.btnFavoritos)
-
-
         val btnSaludar = findViewById<Button>(R.id.btnSaludar)
         val btnIMC = findViewById<Button>(R.id.btnIMC)
 

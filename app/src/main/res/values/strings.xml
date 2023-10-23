@@ -44,4 +44,18 @@
     <string name="text_menu_saludar">Aplicación Saludar (Vista en clase)</string>
     <string name="text_menu_imc">Aplicación IMC (Vista en clase)</string>
 
+    <string name="title_create_favorite_one">Tutorial crear favorito - Paso #1</string>
+    <string name="title_create_favorite_two">Tutorial crear favorito - Paso #2</string>
+    <string name="step_one_tutorial">Primero debes dar clic en la parte inferior derecha sobre el botón de agregar favorito</string>
+    <string name="step_two_tutorial">Se abrirá un dialogo que permite digitar el nombre del favorito y seleccionar su respectivo tipo de contenido</string>
+    <string name="step_three_tutorial">Una vez terminada la digitación y selección dar clic en crear favorito</string>
+    <string name="step_four_tutorial">Ahora se muestran los tipos de contenido en la parte superior para que sean seleccionados y luego se desplegan los favoritos pertenecientes a cada contenido</string>
+
+    <string name="step_five_tutorial">Si seleccionas varios tipos de contenido los favoritos se van agrupando para verlos todos juntos</string>
+    <string name="step_six_tutorial">También existe la opción de cancelar o eliminar un favorito, dando clic sobre el mismo se tacha indicando que ha sido cancelado</string>
+    <string name="step_seven_tutorial">Finalmente el listado total va acumulando tanto cancelados como activos</string>
+
+    <string name="text_button_end_tutorial">Salir de tutorial</string>
+    <string name="text_button_next">Siguiente</string>
+
 </resources>

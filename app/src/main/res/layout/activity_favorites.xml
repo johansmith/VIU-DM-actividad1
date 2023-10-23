@@ -73,4 +73,15 @@
         app:fabSize="normal"
         android:backgroundTint="@color/background_primary"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_help"
+        app:tint="@color/white"
+        android:layout_gravity="left|bottom"
+        app:fabSize="normal"
+        android:backgroundTint="@color/purple_500"/>
+
 </FrameLayout>
